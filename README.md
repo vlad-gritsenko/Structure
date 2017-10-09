@@ -1,1 +1,1 @@
-# app-starter-kit
+# structure
