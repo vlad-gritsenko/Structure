@@ -1,1 +1,1 @@
-# structure
+# Landing page "Structure"
