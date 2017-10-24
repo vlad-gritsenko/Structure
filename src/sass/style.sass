@@ -1,0 +1,784 @@
+@import "../sass/_vars.sass"
+@import "../sass/_mixins.sass"
+
+*
+  box-sizing: border-box
+  outline: none
+
+
+//------Section title inscription------
+.inscription
+  @include inscription
+//----------------------------------
+
+
+//------------Top-------------------
+.top
+  display: flex
+  align-items: center
+  height: 100px
+  background-color: #201f1f
+
+.top-container
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+  width: 1180px
+  margin: 0 auto
+//----------------------------------
+
+
+//----------------Logo--------------
+.logo
+  font-size: 0
+  text-decoration: none
+  white-space: nowrap
+
+  &__icon
+    display: inline-block
+    width: 24px
+    height: 27px
+    margin-right: 10px
+    background: url(/images/logo-icon.png)
+    background-position: 0 0
+
+
+  &__name-struc
+    font-family: 'Helvetica-Th'
+    color: #ffffff
+    font-size: 24px
+    font-weight: 400
+    text-transform: uppercase
+
+  &__name-ture
+    font-family: 'Helvetica-Bd'
+    color: #ffffff
+    font-size: 24px
+    font-weight: 400
+    text-transform: uppercase
+//---------------------------------------
+
+
+//----------------Navigation-------------
+.nav__item
+  display: inline-block
+  margin-right: 25px
+  color: #ffffff
+  font-family: 'Roboto-Regular'
+  font-size: 14px
+  font-weight: 400
+  text-transform: uppercase
+  text-decoration: none
+
+  &:last-child
+    margin-right: 0
+
+  &:hover
+    color: $main-yellow
+//--------------------------------------
+
+
+//----------------Top-group-------------
+.top
+
+  &__lock-icon
+    display: inline-block
+    width: 11px
+    height: 13px
+    margin-right: 10px
+    background: url(/images/lock_search.png)
+    background-position: 0 -13px
+    cursor: pointer
+
+  &__search-icon
+    display: inline-block
+    width: 13px
+    height: 13px
+    background: url(/images/lock_search.png)
+    background-position: 0 0
+    cursor: pointer
+//-----------------------------------------
+
+
+//------------------Main slider------------
+.slider
+  position: relative
+  padding: 100px 0
+  background: url(/images/slider-bg.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  overflow: hidden
+
+.slider__container
+  @include container (block)
+
+.slider__slide
+  display: inline-block
+
+.slider__inscription
+  display: block
+  color: #ffffff
+  font-family: 'Roboto-Light'
+  font-size: 36px
+  text-transform: uppercase
+
+.slider__title-dream
+  font-family: "Roboto-Black"
+  font-size: 104px
+  font-weight: 400
+  color: $main-yellow
+  text-transform: uppercase
+
+.slider__title-house
+  font-family: "Roboto-Black"
+  font-size: 104px
+  font-weight: 400
+  color: #fff
+  text-transform: uppercase
+
+.slider__subtitle
+  display: block
+  font-family: 'Raleway-Light'
+  font-size: 36px
+  color: #ffffff
+
+.slider__text
+  max-width: 750px
+  color: #ffffff
+  font-family: 'Raleway-Light'
+  font-size: 14px
+
+.slider__arrow-left,
+.slider__arrow-right
+  position: absolute
+  padding: 4px 5px 5px 5px
+  color: #fff
+  border: 1px solid #fff
+  border-radius: 100%
+  cursor: pointer
+  z-index: 1
+
+  &:hover
+    color: $main-yellow
+    border: 1px solid $main-yellow
+
+.slider__arrow-left
+  left: -10%
+  top: 50%
+
+.slider__arrow-right
+  top: 50%
+  right: -10%
+
+.slider__dots
+  padding: 0
+
+.slider__dots li
+  display: inline-block
+  list-style-type: none
+
+.slider__dots button
+  font-size: 0
+  line-height: 0
+  color: rgba(0, 0, 0, 0)
+  background: rgba(0, 0, 0, 0)
+  border: none
+  cursor: pointer
+
+  &::before
+    display: block
+    content: ''
+    width: 20px
+    height: 5px
+    background-color: $main-yellow
+    border-radius: 20%
+    transition: .5s
+
+.slick-active button::before
+  width: 40px
+  background-color: #fff
+  transition: .5s
+
+.button
+  display: inline-block
+  width: 270px
+  height: 70px
+  font-family: 'Roboto-Black'
+  font-size: 18px
+  color: $main-black
+  border-radius: 5px
+  line-height: 70px
+  text-align: center
+  text-transform: uppercase
+  text-decoration: none
+
+  &__slide
+    background-color: $main-yellow
+
+  &__arrow
+    margin-left: 20px
+    font-size: 16px
+    color: $main-black
+//-------------------------------------------
+
+
+//------------------Contact us---------------
+.contact-us
+  padding: 100px 0
+  background: url('/images/construction.png')
+
+.contact-us__container
+  @include container (flex)
+  justify-content: space-between
+  align-items: center
+
+.contact-us__title
+  color: $main-black
+  font-family: "Roboto-Black"
+  font-size: 36px
+  text-transform: uppercase
+
+.contact-us__subtitle
+  color: $main-black
+  font-family: 'Raleway-Light'
+  font-size: 14px
+  font-weight: 400
+
+.contact-us__button
+  color: #ffffff
+  font-family: 'Roboto-Regular'
+  font-size: 18px
+  text-transform: uppercase
+  background-color: $main-black
+
+  .button__arrow
+    color: #fff
+//-------------------------------------
+
+
+//----------------Features-------------
+.features
+  padding: 100px 0
+
+.features__container
+  @include container (flex)
+  flex-direction: column
+  align-items: center
+
+.features__title-black
+  @include title-style($main-black)
+
+.features__title-yellow
+  @include title-style($main-yellow)
+
+.features__text
+  max-width: 850px
+  @include section-underline-text
+
+.feature-items
+  display: flex
+  justify-content: space-between
+  width: 100%
+  margin-top: 50px
+
+.feature__item
+  display: flex
+  flex-direction: column
+  align-items: center
+  max-width: 370px
+  min-height: 370px
+  padding: 60px 15px
+  border: 2px solid $main-yellow
+
+  &-text
+    text-align: center
+
+  &:hover
+    background-color: $main-yellow
+
+  &:hover,
+  &:hover a,
+  &:hover .fa
+    color: #fff
+
+.feature__item > .fa
+  color: $main-black
+  font-size: 60px
+  font-weight: 400
+//------------------------------------
+
+
+//----------------Skills--------------
+.skills
+  padding: 100px 0
+
+.skills__container
+  @include container (flex)
+  flex-direction: column
+  align-items: center
+
+.skills__title-black
+  @include title-style($main-black)
+
+.skills__title-yellow
+  @include title-style($main-yellow)
+
+.skill-items
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  margin-top: 100px
+
+.skill__icon
+  display: inline-block
+  margin-right: 20px
+  background: url(/images/skills.png)
+  background-repeat: no-repeat
+
+.skill__item
+  display: flex
+  max-width: 335px
+  margin-bottom: 50px
+
+  &:nth-child(1) .skill__icon
+      background-position: 0 0
+      width: 42px
+      height: 31px
+
+  &:nth-child(2) .skill__icon
+    background-position: 0 -31px
+    width: 42px
+    height: 33px
+
+  &:nth-child(3) .skill__icon
+    background-position: 0 -64px
+    width: 42px
+    height: 42px
+
+  &:nth-child(4) .skill__icon
+    background-position: 0 -106px
+    width: 38px
+    height: 42px
+
+  &:nth-child(5) .skill__icon
+    background-position: 0 -148px
+    width: 36px
+    height: 43px
+
+  &:nth-child(6) .skill__icon
+    background-position: 0 -191px
+    width: 36px
+    height: 43px
+
+.skill__item-content
+  width: 260px
+
+.skill__item-title-regular,
+.skill__item-title-black,
+  color: $main-black
+  font-size: 18px
+  text-transform: uppercase
+
+.skill__item-title-regular
+  font-family: "Roboto-Regular"
+  font-size: 18px
+  font-weight: 400
+  text-transform: uppercase
+
+.skill__item-title-black
+  font-family: "Roboto-Black"
+  font-size: 18px
+  font-weight: 400
+  text-transform: uppercase
+//------------------------------------
+
+
+//--------------Projects--------------
+.projects__container
+  @include container (flex)
+  flex-direction: column
+  align-items: center
+
+.projects__title-black
+  @include title-style($main-black)
+
+.projects__title-yellow
+  @include title-style($main-yellow)
+
+.projects__text
+  @include section-underline-text
+
+.projects__tabs
+  margin-top: 60px
+
+.projects__tab-item
+  margin-right: 20px
+  color: $main-black
+  font-family: 'Roboto-Regular'
+  font-size: 16px
+  font-weight: 300
+  text-decoration: none
+
+  &:hover
+    color: $main-yellow
+    border-bottom: 1px solid $main-yellow
+
+  &:last-child
+    margin-right: 0
+
+.projects__slider
+  margin-top: 30px
+  margin-bottom: 60px
+
+.projects__slide
+  width: 400px
+  height: 400px
+
+.slick-slide:hover .projects__slide-hover
+    opacity: 1
+
+.projects__slide-hover
+  width: 400px
+  height: 400px
+  position: absolute
+  background-color: rgba(238, 196, 0, .7)
+  opacity: 0
+
+.projects__slide-hover .fa
+  position: absolute
+  padding: 8px 10px 10px 10px
+  color: #fff
+  border-radius: 100%
+  cursor: pointer
+
+.projects__slide-hover .fa-search
+  left: 30px
+  bottom: 30px
+  border: 1px solid #fff
+
+.projects__slide-hover .fa-link
+  left: 80px
+  bottom: 30px
+  background-color: $main-black
+
+.button__all-works
+  margin-bottom: 100px
+  background-color: $main-yellow
+//----------------------------------------------
+
+
+// ------------------Team Slider----------------
+.team-slider__container
+  @include container (flex)
+  flex-direction: column
+
+.team-slider__title-black
+  @include title-style($main-black)
+
+.team-slider__title-yellow
+  @include title-style($main-yellow)
+
+.team-slider__text
+  @include section-underline-text
+
+.team-slider__description
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.team-slider__slides
+  display: flex
+  margin-top: 50px
+
+.team-slider__slide
+  position: relative
+  width: 320px
+  height: 475px
+  margin: 0 20px
+  border: 20px solid $main-yellow
+  cursor: pointer
+
+  &:hover .team-slider__slide-hover
+    display: block
+
+.team-slider__member-photo
+  position: absolute
+  left: -20px
+  bottom: -20px
+
+.team-slider__slide-hover
+  display: none
+  position: absolute
+  top: -20px
+  left: -20px
+  width: 320px
+  height: 475px
+  padding: 10px
+  border: 25px solid $main-black
+  background-color: rgba(238, 196, 0, .7)
+
+.team-slider__member-name-bold,
+.team-slider__member-name-regular
+  text-shadow: 3px 2px 0 rgba(0, 0, 0, 0.05)
+  color: #ffffff
+  font-size: 24px
+  text-transform: uppercase
+  font-family: "Roboto-Black"
+
+.team-slider__member-name-regular
+  font-family: "Roboto-Regular"
+
+.team-slider__member-position
+  color: $main-black
+  font-family: 'Roboto-Regular'
+  font-size: 14px
+  text-transform: uppercase
+
+.team-slider__social-icons
+  position: absolute
+  bottom: 10px
+
+  .fa
+    padding: 5px
+    border: 1px solid $main-black
+    border-radius: 100%
+    color: $main-black
+    font-size: 14px
+    cursor: pointer
+
+  .fa-facebook,
+  .fa-tumblr
+    padding: 5px 8px
+//----------------------------------------------
+
+
+//----------------------Feedback----------------
+.feedback__container
+  display: flex
+  flex-direction: column
+  align-items: center
+  max-width: 500px
+  margin: 50px auto
+
+.feedback__title-black
+  @include title-style($main-black)
+
+.feedback__title-yellow
+  @include title-style($main-yellow)
+
+.feedback__text
+  margin-bottom: 130px
+  @include section-underline-text
+
+.f-slider__arrow-up,
+.f-slider__arrow-down
+  position: absolute
+  right: -50px
+  padding: 10px
+  border: 2px solid $main-black
+  border-radius: 100%
+  font-size: 24px
+  z-index: 2
+  cursor: pointer
+
+.feedback__container
+  .slick-disabled
+    color: #b6b6b6
+    border: 2px solid #b6b6b6
+
+.feedback__author
+  display: flex
+  align-items: center
+
+.feedback__author-wrapper
+  display: flex
+  flex-direction: column
+
+.feedback__author-avatar
+  display: inline-block
+  width: 50px
+  height: 50px
+  margin-right: 20px
+  background: url(/images/avatar.jpg)
+  background-repeat: no-repeat
+  background-size: contain
+  border-radius: 100%
+
+.feedback__author-name
+  color: #626262
+  font-family: "Roboto-Black"
+  font-size: 18px
+  text-transform: uppercase
+
+.feedback__author-position
+  color: #626262
+  font-family: 'Roboto-Regular'
+  font-size: 12px
+  line-height: 24px
+  text-transform: uppercase
+
+.feedback__rate .fa
+  color: $main-yellow
+//--------------------------------
+
+
+//-------Subscribe----------------
+.subscribe__container
+  @include container (flex)
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 165px
+
+.subscribe__text
+  display: flex
+  flex-direction: column
+
+.subscribe__inscription
+  display: block
+  position: relative
+  color: $main-black
+  font-family: 'Roboto-Regular'
+  font-size: 18px
+  letter-spacing: 3px
+  text-transform: uppercase
+
+  &:after
+    display: block
+    position: absolute
+    top: 50%
+    right: 0
+    content: ''
+    width: 200px
+    border: 2px dashed $main-black
+    border-top: 0
+
+.subscribe__title-black
+  @include title-style($main-black)
+
+.subscribe__title-yellow
+  @include title-style($main-yellow)
+
+.subscribe__input-form
+  display: flex
+  align-items: center
+  height: 48px
+  border: 1px solid $main-black
+
+  input
+    width: 400px
+    padding: 10px
+    border: none
+
+  input[placeholder]
+  color: #878787
+  font-family: 'Raleway-Regular'
+  font-size: 14px
+  font-weight: 400
+
+  a
+    width: 150px
+    padding: 15px
+    color: $main-black
+    font-family: 'Roboto-Regular'
+    font-size: 14px
+    font-weight: 700
+    background-color: $main-yellow
+    text-decoration: none
+    text-transform: uppercase
+    text-align: center
+//-------------------------------------
+
+
+//------------Separator----------------
+.separator
+  width: 100%
+  height: 28px
+  margin: 0 auto
+  background: url(../images/separator.png)
+  background-repeat: no-repeat
+  background-size: cover
+//-------------------------------------
+
+
+//-------------Footer------------------
+footer
+  padding: 100px 0
+  background: url(../images/footer-bg.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+
+.footer-container
+  @include container (flex)
+
+.footer-logo
+  .logo
+    &__icon
+      background-position: 0 27px
+
+    span
+      color: $main-yellow
+
+.footer-logo__text
+  width: 270px
+  margin-right: 20px
+  color: #ffffff
+  font-family: "Raleway-Light"
+  font-size: 14px
+  line-height: 24px
+  letter-spacing: 0.14px
+
+.footer-services
+  width: 220px
+
+.footer-services__title
+  @include footer-title
+
+.footer-services__items a
+  display: block
+  position: relative
+  margin-left: 10px
+  margin-bottom: 10px
+  font-family: "Raleway-Light"
+  font-size: 14px
+  font-weight: 400
+  color: #fff
+  text-decoration: none
+
+  &::before
+    position: absolute
+    top: 2.5px
+    left: -10px
+    display: block
+    content: ''
+    border-style: solid
+    border-width: 2.5px 0 2.5px 5px
+    border-color: transparent transparent transparent #ffffff
+
+.recent-tweets
+  width: 260px
+
+.recent-tweets__title
+  @include footer-title
+
+.tweet
+  display: flex
+  margin-top: 20px
+
+  .fa-twitter
+    color: #8e91ff
+    margin-right: 10px
+
+  p
+    color: #fff
+    font-family: 'Raleway-Light'
+    font-size: 14px
+      // color: #eec400
+      // font-weight: 400
+    margin: 0
+
+  span
+    display: block
+    color: #fff
+    margin-top: 20px
+    font-weight: 700

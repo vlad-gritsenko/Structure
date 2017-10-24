@@ -12,7 +12,7 @@ const   gulp          = require('gulp'),
         cache         = require('gulp-cache');
 
 gulp.task('sass', () => {
-    return gulp.src('src/**/**/*.sass')
+    return gulp.src('src/sass/*.sass')
         .pipe(sass())
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('src/css'))
@@ -28,8 +28,16 @@ gulp.task('browser-sync', () => {
     });
 });
 
+gulp.task('libs', () => {
+  return gulp.src('src/libs/**/*.js')
+    .pipe(concat('libs.js'))
+    .pipe(uglify())
+    .pipe(babel())
+    .pipe(gulp.dest('src/js'))
+});
+
 gulp.task('scripts', () => {
-  return gulp.src('src/js/*.js')
+    return gulp.src('src/js/*.js')
     .pipe(uglify())
     .pipe(babel())
     .pipe(gulp.dest('dist/js'));
@@ -37,9 +45,9 @@ gulp.task('scripts', () => {
 
 gulp.task('css', ['sass'], () => {
     return gulp.src('src/css/*.css')
-      .pipe(cssnano())
-      .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest('dist/css'));
+    .pipe(cssnano())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('watch', ['browser-sync'], () => {

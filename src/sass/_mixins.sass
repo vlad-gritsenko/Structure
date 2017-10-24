@@ -1,0 +1,55 @@
+@mixin container ($display)
+  display: $display
+  max-width: 1180px
+  margin: 0 auto
+
+
+@mixin title-style ($color)
+  font-family: "Roboto-Black"
+  font-size: 36px
+  font-weight: 400
+  text-transform: uppercase
+  color: $color
+
+@mixin inscription
+  position: relative
+  color: $main-black
+  font-family: 'Roboto-Regular'
+  font-size: 18px
+  font-weight: 400
+  text-transform: uppercase
+
+  &::before
+    display: block
+    position: absolute
+    top: 50%
+    left: -120px
+    content: ''
+    width: 100px
+    border: 2px dashed $main-black
+    border-top: none
+
+  &::after
+    display: block
+    position: absolute
+    top: 50%
+    right: -120px
+    content: ''
+    width: 100px
+    border: 2px dashed $main-black
+    border-top: none
+
+@mixin section-underline-text
+  color: #626262
+  font-family: 'Raleway-Light'
+  font-size: 14px
+  font-weight: 400
+  text-align: center
+
+@mixin footer-title
+  margin-bottom: 20px
+  color: #ffffff
+  font-family: "Roboto-Black"
+  font-size: 20px
+  font-weight: 400
+  text-transform: uppercase

@@ -1,4 +1,29 @@
 @font-face {
-  font-family: 'Lorem-Font';
-  src: url('../fonts/Lorem-Font.woff2');
+  font-family: 'Helvetica-Th';
+  src: url('../fonts/HelveticaNeueLTStd-Th.otf');
+}
+
+@font-face {
+  font-family: 'Helvetica-Bd';
+  src: url('../fonts/HelveticaNeueBold.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('../fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url('../fonts/Roboto-Black.ttf');
+}
+
+@font-face {
+  font-family: 'Raleway-Light';
+  src: url('../fonts/Raleway-Light.ttf');
 }
