@@ -1,9 +1,18 @@
+// Slick slider
 $(document).ready(function(){
   $('.slider__container').slick({
     prevArrow: '<i class="slider__arrow-left fa fa-arrow-left" aria-hidden="true"></i>',
     nextArrow: '<i class="slider__arrow-right fa fa-arrow-right" aria-hidden="true"></i>',
     dots: true,
-    dotsClass: 'slider__dots'
+    dotsClass: 'slider__dots',
+    responsive: [
+      {
+        breakpoint: 880,
+        settings: {
+          prevArrow: false,
+          nextArrow: false        }
+        }
+    ]
   });
 
   $('.projects__slider').slick({
@@ -16,12 +25,13 @@ $(document).ready(function(){
   });
 
   $('.team-slider__slides').slick({
-    dots: false,
+    dots: true,
+    dotsClass: 'slider__dots',
     infinite: true,
     arrows: false,
     variableWidth: true,
-    slidesToShow: 3,
-    slidesToScroll: 2
+    slidesToShow: 2,
+    slidesToScroll: 1
   });
 
   $('.feedback__slider').slick({
@@ -31,5 +41,9 @@ $(document).ready(function(){
     vertical: true,
     prevArrow: '<i class="f-slider__arrow-up fa fa-arrow-up" aria-hidden="true"></i>',
     nextArrow: '<i class="f-slider__arrow-down fa fa-arrow-down" aria-hidden="true"></i>'
+  });
+  
+  $('.hamburger').click(function(){
+    $('.nav').toggleClass('active');
   });
 });

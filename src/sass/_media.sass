@@ -1,0 +1,112 @@
+@media screen and (max-width: 880px)
+
+  .top-container
+    position: relative
+
+  .logo
+    margin-left: 20px
+
+  .hamburger
+    display: block
+    position: absolute
+    top: 10px
+    right: 20px
+
+    span
+      display: block
+      width: 40px
+      height: 3px
+      margin-bottom: 5px
+      background-color: #fff
+
+  .nav
+    justify-content: space-between
+    flex-wrap: wrap
+    position: absolute
+    top: 65px
+    width: 100%
+    padding: 20px
+    background-color: lighten($main-black, 10%)
+    z-index: 1
+
+    &__item
+      margin: 5px
+
+  .top__group
+    display: none
+
+  .slider__container
+    // padding: 0 20px
+    overflow: hidden
+
+    .button
+      max-width: 200px
+
+    .slider__arrow-left,
+    .slider__arrow-right
+      left: 9999px
+
+  .contact-us__container
+    flex-direction: column
+
+  .features__container,
+  .contact-us__container,
+  .projects__container,
+  .feedback__container,
+  .contact-us__container
+    padding: 0 20px
+
+  .features__title,
+  .skills__title,
+  .projects__title,
+  .team-slider__title,
+  .feedback__title,
+  .subscribe__title,
+  .subscribe__inscription
+    text-align: center
+
+  .projects__tabs
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    .projects__tab-item
+      flex-basis: 25%
+      margin-right: 0
+      margin-bottom: 20px
+
+  .feedback__container
+    overflow-x: hidden
+
+  .f-slider__arrow-up,
+  .f-slider__arrow-down
+    opacity: 0
+
+  .subscribe__container
+    flex-direction: column
+
+  .footer-container
+    flex-wrap: wrap
+    justify-content: flex-start
+    padding: 0 20px
+
+@media screen and (max-width: 500px)
+  .nav__item
+    flex-basis: 20%
+
+  .slider__inscription
+    font-size: 24px
+
+  .slider__title-dream,
+  .slider__title-house
+    font-size: 60px
+
+  .inscription::before,
+  .inscription::after
+    display: none
+
+  .subscribe__inscription::after
+    display: none
+
+    .slider__slide
+      margin-right: 15px
